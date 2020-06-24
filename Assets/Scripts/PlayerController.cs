@@ -13,13 +13,14 @@ public class PlayerController : MonoBehaviour
     public float groundCheckRadius;
     public LayerMask groundLayer;
     private bool isTouchingGround;
-
+    private Animator playerAnimation;
 
 
     // Start is called before the first frame update
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+        playerAnimation = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -30,10 +31,12 @@ public class PlayerController : MonoBehaviour
 
         if(movement >0f) {
             rigidBody.velocity = new Vector2(movement * speed, rigidBody.velocity.y);
+            transform.localScale = new Vector2(4.0616f, 4.0616f);
         }
 
         else if (movement < 0f) {
             rigidBody.velocity = new Vector2(movement * speed, rigidBody.velocity.y);
+            transform.localScale = new Vector2(-4.0616f, 4.0616f);
         }
 
         else {
@@ -44,5 +47,8 @@ public class PlayerController : MonoBehaviour
         {
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpSpeed);
         }
+
+        playerAnimation.SetFloat("Speed", Mathf.Abs (rigidBody.velocity.x));
+        playerAnimation.SetBool("OnGround", isTouchingGround);
     }
 }

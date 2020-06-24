@@ -377,7 +377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820832941}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.74, y: -3.91, z: 0}
+  m_LocalPosition: {x: -17.85, y: -3.94, z: 0}
   m_LocalScale: {x: 4.0616, y: 4.0616, z: 4.0616}
   m_Children:
   - {fileID: 1578826884}
@@ -482,8 +482,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d4bd82034cf4a34b706c0ff95d5685, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  jumpSpeed: 8
+  speed: 8
+  jumpSpeed: 7
   movement: 0
   groundCheckPoint: {fileID: 1578826884}
   groundCheckRadius: 1
@@ -608,7 +608,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578826883}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.073, y: -0.561, z: 0}
+  m_LocalPosition: {x: -0.073, y: -0.568, z: 0}
   m_LocalScale: {x: 3.3311, y: 3.3311, z: 3.3311}
   m_Children: []
   m_Father: {fileID: 820832944}
